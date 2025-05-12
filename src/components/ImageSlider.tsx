@@ -1,7 +1,6 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import 'swiper/css';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 interface ImageSliderProps {
   images: string[];
@@ -20,7 +19,11 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
     >
       {images.map((img, index) => (
         <SwiperSlide key={index}>
-          <img src={img} alt={`Slide ${index}`} className="w-full h-64 object-cover" />
+          <img
+            src={img}
+            alt={`Slide ${index}`}
+            className="w-full h-64 object-cover"
+          />
         </SwiperSlide>
       ))}
     </Swiper>
